@@ -15,7 +15,15 @@ Page({
     })
   },
   onLoad: function () {
-    wx.api.hello().then(res => {
+    wx.api.hello({
+        book_index: 1,
+        name: '陈天才'
+      }).then(res => {
+      console.log(res)
+    })
+    wx.api.book({
+        book_index: 3
+    }).then(res => {
       console.log(res)
     })
     if (app.globalData.userInfo) {
