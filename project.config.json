@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.6",
 	"appid": "wxe744e8852db86a17",
-	"projectname": "qmogu",
+	"projectname": "mp-qmogu",
 	"condition": {
 		"search": {
 			"current": -1,

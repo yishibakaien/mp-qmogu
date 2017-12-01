@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const ajax = require('../../config/api')
 Page({
   data: {
     motto: 'Hello World',
@@ -16,9 +15,7 @@ Page({
     })
   },
   onLoad: function () {
-    ajax({
-      url: 'hello'
-    }).then(res => {
+    wx.api.hello().then(res => {
       console.log(res)
     })
     if (app.globalData.userInfo) {

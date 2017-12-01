@@ -1,6 +1,12 @@
+import * as api from './api/api'
 //app.js
 App({
   onLaunch: function () {
+    // 挂载全局 api 在所有的地方都可以直接发起 api 网络请求
+    // 命名空间
+    wx.api = {}
+    Object.assign(wx.api, api)
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
