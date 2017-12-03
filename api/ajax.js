@@ -18,7 +18,7 @@ const ajax = options => {
         reject(res)
       },
       complete: function(res) {
-        typeof options.complete === 'function' && options.complete.apply(this, res)
+        typeof options.complete === 'function' && options.complete.apply(null, res)
       }
     })
   })

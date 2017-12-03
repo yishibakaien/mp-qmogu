@@ -10,3 +10,8 @@ export const book = data => ajax({
   url: 'book',
   data
 })
+
+export const addGoods = data => ajax({
+  url: 'addGoods',
+  data
+})

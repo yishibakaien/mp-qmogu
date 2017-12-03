@@ -16,16 +16,23 @@ Page({
   },
   onLoad: function () {
     wx.api.hello({
-        book_index: 1,
         name: '陈天才'
       }).then(res => {
       console.log(res)
     })
     wx.api.book({
-        book_index: 3
+        book_index: 1
     }).then(res => {
       console.log(res)
     })
+    wx.api.addGoods({
+      item_pics: 'http://image.tswq.wang/supply/1512184397432',
+      parent_index: 10001,
+      item_price: 1000,
+      item_title: '一张测试图片', 
+      item_name: 'patterns'
+    })
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
